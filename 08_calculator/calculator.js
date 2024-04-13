@@ -19,21 +19,13 @@ const power = function(num, power) {
 };
 
 const factorial = function(num) {
-	//if num is 5
-  let arr = [];
-
-  if(num === 0) {
-    arr.push(1);
-  } else {
-    for(let i = num; i > 0; i--) {
-      arr.push(i);
-    }
-  }
-
-  return arr.reduce((total, currentItem) => {
-    return total * currentItem;
-  }, 1);
-};
+	if(num === 0) return 1;
+  let product = 1;
+  for(let i = num; i > 0; i--) {
+      product *= i;
+    };
+    return product;
+  };
 
 // Do not edit below this line
 module.exports = {
